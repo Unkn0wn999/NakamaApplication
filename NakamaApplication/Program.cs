@@ -16,7 +16,7 @@ namespace NakamaApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InterfazCarga());
+            Application.Run(new Menu()); 
         }
     }
 }
