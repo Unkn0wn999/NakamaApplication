@@ -302,6 +302,7 @@
             this.btn_minimizar.TabIndex = 102;
             this.btn_minimizar.Text = "-";
             this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // btn_salir
             // 
@@ -315,6 +316,7 @@
             this.btn_salir.TabIndex = 101;
             this.btn_salir.Text = "X";
             this.btn_salir.UseVisualStyleBackColor = false;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
             // dateTimePicker
             // 

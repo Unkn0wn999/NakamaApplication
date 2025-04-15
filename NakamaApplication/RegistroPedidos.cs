@@ -17,5 +17,14 @@ namespace NakamaApplication
             InitializeComponent();
         }
 
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+           Application.Exit();  
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }
