@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_salir = new System.Windows.Forms.Button();
-            this.txt_numDoc = new System.Windows.Forms.TextBox();
+            this.txt_nserie = new System.Windows.Forms.TextBox();
             this.btn_cerrarSesion = new System.Windows.Forms.Button();
             this.btn_menu = new System.Windows.Forms.Button();
             this.btn_siguiente = new System.Windows.Forms.Button();
@@ -37,34 +37,34 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_registrar = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
-            this.txt_telf = new System.Windows.Forms.TextBox();
-            this.txt_email = new System.Windows.Forms.TextBox();
+            this.txt_estado = new System.Windows.Forms.TextBox();
+            this.txt_amodelo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txt_numLic = new System.Windows.Forms.TextBox();
-            this.txt_nacionalidad = new System.Windows.Forms.TextBox();
+            this.txt_nvin = new System.Windows.Forms.TextBox();
+            this.txt_nmotor = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_edad = new System.Windows.Forms.TextBox();
-            this.txt_segundoApellido = new System.Windows.Forms.TextBox();
-            this.txt_primerApellido = new System.Windows.Forms.TextBox();
-            this.txt_nombres = new System.Windows.Forms.TextBox();
+            this.txt_color = new System.Windows.Forms.TextBox();
+            this.txt_modelo = new System.Windows.Forms.TextBox();
+            this.txt_marca = new System.Windows.Forms.TextBox();
+            this.txt_nplaca = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgv_motorizados = new System.Windows.Forms.DataGridView();
+            this.dgv_vehiculos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cb_tipoDoc = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_propietario = new System.Windows.Forms.TextBox();
+            this.cb_tipoV = new System.Windows.Forms.ComboBox();
+            this.txt_buscar = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_motorizados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_vehiculos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,13 +80,14 @@
             this.btn_salir.TabIndex = 77;
             this.btn_salir.Text = "X";
             this.btn_salir.UseVisualStyleBackColor = false;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
-            // txt_numDoc
+            // txt_nserie
             // 
-            this.txt_numDoc.Location = new System.Drawing.Point(420, 94);
-            this.txt_numDoc.Name = "txt_numDoc";
-            this.txt_numDoc.Size = new System.Drawing.Size(100, 22);
-            this.txt_numDoc.TabIndex = 75;
+            this.txt_nserie.Location = new System.Drawing.Point(420, 94);
+            this.txt_nserie.Name = "txt_nserie";
+            this.txt_nserie.Size = new System.Drawing.Size(100, 22);
+            this.txt_nserie.TabIndex = 75;
             // 
             // btn_cerrarSesion
             // 
@@ -94,7 +95,6 @@
             this.btn_cerrarSesion.Name = "btn_cerrarSesion";
             this.btn_cerrarSesion.Size = new System.Drawing.Size(40, 23);
             this.btn_cerrarSesion.TabIndex = 74;
-            this.btn_cerrarSesion.Text = "button7";
             this.btn_cerrarSesion.UseVisualStyleBackColor = true;
             // 
             // btn_menu
@@ -103,8 +103,8 @@
             this.btn_menu.Name = "btn_menu";
             this.btn_menu.Size = new System.Drawing.Size(40, 23);
             this.btn_menu.TabIndex = 73;
-            this.btn_menu.Text = "button6";
             this.btn_menu.UseVisualStyleBackColor = true;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
             // btn_siguiente
             // 
@@ -176,24 +176,25 @@
             this.btn_nuevo.UseVisualStyleBackColor = false;
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
-            // txt_telf
+            // txt_estado
             // 
-            this.txt_telf.Location = new System.Drawing.Point(657, 94);
-            this.txt_telf.Name = "txt_telf";
-            this.txt_telf.Size = new System.Drawing.Size(100, 22);
-            this.txt_telf.TabIndex = 63;
+            this.txt_estado.Location = new System.Drawing.Point(657, 94);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(100, 22);
+            this.txt_estado.TabIndex = 63;
             // 
-            // txt_email
+            // txt_amodelo
             // 
-            this.txt_email.Location = new System.Drawing.Point(657, 134);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(100, 22);
-            this.txt_email.TabIndex = 62;
+            this.txt_amodelo.Location = new System.Drawing.Point(657, 134);
+            this.txt_amodelo.Name = "txt_amodelo";
+            this.txt_amodelo.Size = new System.Drawing.Size(100, 22);
+            this.txt_amodelo.TabIndex = 62;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.Location = new System.Drawing.Point(548, 137);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 16);
@@ -204,6 +205,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label11.Location = new System.Drawing.Point(548, 96);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 16);
@@ -214,30 +216,32 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label12.Location = new System.Drawing.Point(548, 58);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(88, 16);
             this.label12.TabIndex = 59;
             this.label12.Text = "Propietario:";
             // 
-            // txt_numLic
+            // txt_nvin
             // 
-            this.txt_numLic.Location = new System.Drawing.Point(420, 132);
-            this.txt_numLic.Name = "txt_numLic";
-            this.txt_numLic.Size = new System.Drawing.Size(100, 22);
-            this.txt_numLic.TabIndex = 57;
+            this.txt_nvin.Location = new System.Drawing.Point(420, 132);
+            this.txt_nvin.Name = "txt_nvin";
+            this.txt_nvin.Size = new System.Drawing.Size(100, 22);
+            this.txt_nvin.TabIndex = 57;
             // 
-            // txt_nacionalidad
+            // txt_nmotor
             // 
-            this.txt_nacionalidad.Location = new System.Drawing.Point(420, 173);
-            this.txt_nacionalidad.Name = "txt_nacionalidad";
-            this.txt_nacionalidad.Size = new System.Drawing.Size(100, 22);
-            this.txt_nacionalidad.TabIndex = 56;
+            this.txt_nmotor.Location = new System.Drawing.Point(420, 173);
+            this.txt_nmotor.Name = "txt_nmotor";
+            this.txt_nmotor.Size = new System.Drawing.Size(100, 22);
+            this.txt_nmotor.TabIndex = 56;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(303, 176);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 16);
@@ -248,6 +252,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(303, 135);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 16);
@@ -258,6 +263,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(303, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 16);
@@ -268,46 +274,47 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(303, 58);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 16);
             this.label9.TabIndex = 52;
             this.label9.Text = "Nro Placa:";
             // 
-            // txt_edad
+            // txt_color
             // 
-            this.txt_edad.Location = new System.Drawing.Point(178, 170);
-            this.txt_edad.Name = "txt_edad";
-            this.txt_edad.Size = new System.Drawing.Size(100, 22);
-            this.txt_edad.TabIndex = 51;
+            this.txt_color.Location = new System.Drawing.Point(178, 170);
+            this.txt_color.Name = "txt_color";
+            this.txt_color.Size = new System.Drawing.Size(100, 22);
+            this.txt_color.TabIndex = 51;
             // 
-            // txt_segundoApellido
+            // txt_modelo
             // 
-            this.txt_segundoApellido.Location = new System.Drawing.Point(178, 135);
-            this.txt_segundoApellido.Name = "txt_segundoApellido";
-            this.txt_segundoApellido.Size = new System.Drawing.Size(100, 22);
-            this.txt_segundoApellido.TabIndex = 50;
+            this.txt_modelo.Location = new System.Drawing.Point(178, 135);
+            this.txt_modelo.Name = "txt_modelo";
+            this.txt_modelo.Size = new System.Drawing.Size(100, 22);
+            this.txt_modelo.TabIndex = 50;
             // 
-            // txt_primerApellido
+            // txt_marca
             // 
-            this.txt_primerApellido.Location = new System.Drawing.Point(178, 97);
-            this.txt_primerApellido.Name = "txt_primerApellido";
-            this.txt_primerApellido.Size = new System.Drawing.Size(100, 22);
-            this.txt_primerApellido.TabIndex = 49;
+            this.txt_marca.Location = new System.Drawing.Point(178, 97);
+            this.txt_marca.Name = "txt_marca";
+            this.txt_marca.Size = new System.Drawing.Size(100, 22);
+            this.txt_marca.TabIndex = 49;
             // 
-            // txt_nombres
+            // txt_nplaca
             // 
-            this.txt_nombres.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_nombres.Location = new System.Drawing.Point(420, 55);
-            this.txt_nombres.Name = "txt_nombres";
-            this.txt_nombres.Size = new System.Drawing.Size(100, 22);
-            this.txt_nombres.TabIndex = 48;
+            this.txt_nplaca.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_nplaca.Location = new System.Drawing.Point(420, 55);
+            this.txt_nplaca.Name = "txt_nplaca";
+            this.txt_nplaca.Size = new System.Drawing.Size(100, 22);
+            this.txt_nplaca.TabIndex = 48;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(38, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 16);
@@ -318,6 +325,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(38, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 16);
@@ -328,6 +336,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(38, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 16);
@@ -338,22 +347,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(38, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 16);
             this.label2.TabIndex = 44;
             this.label2.Text = "Tipo Vehiculo";
             // 
-            // dgv_motorizados
+            // dgv_vehiculos
             // 
-            this.dgv_motorizados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_motorizados.Location = new System.Drawing.Point(7, 291);
-            this.dgv_motorizados.Name = "dgv_motorizados";
-            this.dgv_motorizados.RowHeadersWidth = 51;
-            this.dgv_motorizados.RowTemplate.Height = 24;
-            this.dgv_motorizados.Size = new System.Drawing.Size(781, 166);
-            this.dgv_motorizados.TabIndex = 43;
+            this.dgv_vehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_vehiculos.Location = new System.Drawing.Point(7, 291);
+            this.dgv_vehiculos.Name = "dgv_vehiculos";
+            this.dgv_vehiculos.RowHeadersWidth = 51;
+            this.dgv_vehiculos.RowTemplate.Height = 24;
+            this.dgv_vehiculos.Size = new System.Drawing.Size(781, 166);
+            this.dgv_vehiculos.TabIndex = 43;
             // 
             // label1
             // 
@@ -389,33 +398,34 @@
             this.pictureBox3.TabIndex = 71;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox1
+            // txt_propietario
             // 
-            this.textBox1.Location = new System.Drawing.Point(657, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 79;
+            this.txt_propietario.Location = new System.Drawing.Point(657, 55);
+            this.txt_propietario.Name = "txt_propietario";
+            this.txt_propietario.Size = new System.Drawing.Size(100, 22);
+            this.txt_propietario.TabIndex = 79;
             // 
-            // cb_tipoDoc
+            // cb_tipoV
             // 
-            this.cb_tipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_tipoDoc.FormattingEnabled = true;
-            this.cb_tipoDoc.Location = new System.Drawing.Point(178, 58);
-            this.cb_tipoDoc.Name = "cb_tipoDoc";
-            this.cb_tipoDoc.Size = new System.Drawing.Size(100, 24);
-            this.cb_tipoDoc.TabIndex = 58;
+            this.cb_tipoV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_tipoV.FormattingEnabled = true;
+            this.cb_tipoV.Location = new System.Drawing.Point(178, 58);
+            this.cb_tipoV.Name = "cb_tipoV";
+            this.cb_tipoV.Size = new System.Drawing.Size(100, 24);
+            this.cb_tipoV.TabIndex = 58;
             // 
-            // textBox2
+            // txt_buscar
             // 
-            this.textBox2.Location = new System.Drawing.Point(629, 264);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 22);
-            this.textBox2.TabIndex = 80;
+            this.txt_buscar.Location = new System.Drawing.Point(629, 264);
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(159, 22);
+            this.txt_buscar.TabIndex = 80;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label15.Location = new System.Drawing.Point(564, 267);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 16);
@@ -429,11 +439,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(800, 490);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_buscar);
+            this.Controls.Add(this.txt_propietario);
             this.Controls.Add(this.btn_minimizar);
             this.Controls.Add(this.btn_salir);
-            this.Controls.Add(this.txt_numDoc);
+            this.Controls.Add(this.txt_nserie);
             this.Controls.Add(this.btn_cerrarSesion);
             this.Controls.Add(this.btn_menu);
             this.Controls.Add(this.pictureBox3);
@@ -442,35 +452,35 @@
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.btn_registrar);
             this.Controls.Add(this.btn_nuevo);
-            this.Controls.Add(this.txt_telf);
-            this.Controls.Add(this.txt_email);
+            this.Controls.Add(this.txt_estado);
+            this.Controls.Add(this.txt_amodelo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.cb_tipoDoc);
-            this.Controls.Add(this.txt_numLic);
-            this.Controls.Add(this.txt_nacionalidad);
+            this.Controls.Add(this.cb_tipoV);
+            this.Controls.Add(this.txt_nvin);
+            this.Controls.Add(this.txt_nmotor);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_edad);
-            this.Controls.Add(this.txt_segundoApellido);
-            this.Controls.Add(this.txt_primerApellido);
-            this.Controls.Add(this.txt_nombres);
+            this.Controls.Add(this.txt_color);
+            this.Controls.Add(this.txt_modelo);
+            this.Controls.Add(this.txt_marca);
+            this.Controls.Add(this.txt_nplaca);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgv_motorizados);
+            this.Controls.Add(this.dgv_vehiculos);
             this.Controls.Add(this.label1);
-            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistroVehiculos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistroVehiculos";
             this.Load += new System.EventHandler(this.RegistroVehiculos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_motorizados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_vehiculos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -479,7 +489,7 @@
 
         #endregion
         private System.Windows.Forms.Button btn_salir;
-        private System.Windows.Forms.TextBox txt_numDoc;
+        private System.Windows.Forms.TextBox txt_nserie;
         private System.Windows.Forms.Button btn_cerrarSesion;
         private System.Windows.Forms.Button btn_menu;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -488,31 +498,31 @@
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_registrar;
         private System.Windows.Forms.Button btn_nuevo;
-        private System.Windows.Forms.TextBox txt_telf;
-        private System.Windows.Forms.TextBox txt_email;
+        private System.Windows.Forms.TextBox txt_estado;
+        private System.Windows.Forms.TextBox txt_amodelo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txt_numLic;
-        private System.Windows.Forms.TextBox txt_nacionalidad;
+        private System.Windows.Forms.TextBox txt_nvin;
+        private System.Windows.Forms.TextBox txt_nmotor;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_edad;
-        private System.Windows.Forms.TextBox txt_segundoApellido;
-        private System.Windows.Forms.TextBox txt_primerApellido;
-        private System.Windows.Forms.TextBox txt_nombres;
+        private System.Windows.Forms.TextBox txt_color;
+        private System.Windows.Forms.TextBox txt_modelo;
+        private System.Windows.Forms.TextBox txt_marca;
+        private System.Windows.Forms.TextBox txt_nplaca;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgv_motorizados;
+        private System.Windows.Forms.DataGridView dgv_vehiculos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_minimizar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox cb_tipoDoc;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_propietario;
+        private System.Windows.Forms.ComboBox cb_tipoV;
+        private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label label15;
     }
 }

@@ -146,12 +146,79 @@ namespace NakamaApplication
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
+            if (dgv_motorizados.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un motorizado para modificar.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            try
+            {
+                GuardarImagen(ruta); // Actualiza la imagen
+
+                int idMotorizado = Convert.ToInt32(dgv_motorizados.CurrentRow.Cells["IdMotorizado"].Value);
+
+                SqlCommand cmd = new SqlCommand("Sp_ActualizarMotorizado", ConexionBD.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@idMotorizado", idMotorizado);
+                cmd.Parameters.AddWithValue("@nombres", txt_nombres.Text);
+                cmd.Parameters.AddWithValue("@primerApellido", txt_primerApellido.Text);
+                cmd.Parameters.AddWithValue("@segundoApellido", txt_segundoApellido.Text);
+                cmd.Parameters.AddWithValue("@edad", int.Parse(txt_edad.Text));
+                cmd.Parameters.AddWithValue("@tipoDocumento", cb_tipoDoc.SelectedItem?.ToString() ?? "");
+                cmd.Parameters.AddWithValue("@numeroDocumento", txt_numDoc.Text);
+                cmd.Parameters.AddWithValue("@numeroLicencia", txt_numLic.Text);
+                cmd.Parameters.AddWithValue("@nacionalidad", txt_nacionalidad.Text);
+                cmd.Parameters.AddWithValue("@sexo", cb_sexo.SelectedItem?.ToString() ?? "");
+                cmd.Parameters.AddWithValue("@telefono", txt_telf.Text);
+                cmd.Parameters.AddWithValue("@email", txt_email.Text);
+                cmd.Parameters.AddWithValue("@foto", Foto);
+
+                ConexionBD.AbrirConexion();
+                cmd.ExecuteNonQuery();
+                ConexionBD.CerrarConexion();
+
+                MessageBox.Show("Datos actualizados correctamente.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ListarMotorizados();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar: " + ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
+            if (dgv_motorizados.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un motorizado para eliminar.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            DialogResult result = MessageBox.Show("¿Está seguro de eliminar este motorizado?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+                return;
+
+            try
+            {
+                int idMotorizado = Convert.ToInt32(dgv_motorizados.CurrentRow.Cells["IdMotorizado"].Value);
+
+                SqlCommand cmd = new SqlCommand("Sp_EliminarMotorizado", ConexionBD.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idMotorizado", idMotorizado);
+
+                ConexionBD.AbrirConexion();
+                cmd.ExecuteNonQuery();
+                ConexionBD.CerrarConexion();
+
+                MessageBox.Show("Motorizado eliminado correctamente.", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ListarMotorizados();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_salir_Click(object sender, EventArgs e)

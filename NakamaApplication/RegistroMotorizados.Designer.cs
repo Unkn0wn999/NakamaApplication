@@ -376,7 +376,6 @@
             this.btn_menu.Name = "btn_menu";
             this.btn_menu.Size = new System.Drawing.Size(40, 23);
             this.btn_menu.TabIndex = 36;
-            this.btn_menu.Text = "button6";
             this.btn_menu.UseVisualStyleBackColor = true;
             this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
@@ -386,7 +385,6 @@
             this.btn_cerrarSesion.Name = "btn_cerrarSesion";
             this.btn_cerrarSesion.Size = new System.Drawing.Size(40, 23);
             this.btn_cerrarSesion.TabIndex = 37;
-            this.btn_cerrarSesion.Text = "button7";
             this.btn_cerrarSesion.UseVisualStyleBackColor = true;
             // 
             // txt_numDoc
