@@ -85,12 +85,6 @@
     <Compile Include="HistorialPedidos.Designer.cs">
       <DependentUpon>HistorialPedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfazCarga.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfazCarga.Designer.cs">
-      <DependentUpon>InterfazCarga.cs</DependentUpon>
-    </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
     </Compile>

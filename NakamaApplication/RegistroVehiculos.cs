@@ -117,5 +117,10 @@ namespace NakamaApplication
             menu.ShowDialog();
             this.Hide();
         }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

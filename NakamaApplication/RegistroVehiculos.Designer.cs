@@ -387,6 +387,7 @@
             this.btn_minimizar.TabIndex = 78;
             this.btn_minimizar.Text = "-";
             this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // pictureBox3
             // 
