@@ -91,6 +91,12 @@
     <Compile Include="InterfazCarga.Designer.cs">
       <DependentUpon>InterfazCarga.cs</DependentUpon>
     </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     <Compile Include="RegistroVehiculos.Designer.cs">
       <DependentUpon>RegistroVehiculos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\motocicleta %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nakama_logobg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

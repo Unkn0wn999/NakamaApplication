@@ -93,6 +93,16 @@ namespace NakamaApplication.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nakama_logobg {
+            get {
+                object obj = ResourceManager.GetObject("nakama_logobg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Upload_Stack {
             get {
                 object obj = ResourceManager.GetObject("Upload-Stack", resourceCulture);

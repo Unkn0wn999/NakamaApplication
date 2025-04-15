@@ -9,7 +9,7 @@ namespace NakamaApplication
 {
     public static class ConexionBD
     {
-        public static SqlConnection con = new SqlConnection("Data Source =.; Initial Catalog = NAKAMA; Integrated Security = True; Encrypt=False");
+        public static SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=NAKAMA;Integrated Security=True;Encrypt=False");
         public static void AbrirConexion()
         {
             if (con.State == System.Data.ConnectionState.Closed)

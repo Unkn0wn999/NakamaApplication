@@ -31,7 +31,7 @@ namespace NakamaApplication
 
         private void RegistroMotorizados_Load(object sender, EventArgs e)
         {
-            //ListarMotorizados();
+            ListarMotorizados();
         }
         private void btn_nuevo_Click(object sender, EventArgs e)
         {
@@ -70,15 +70,34 @@ namespace NakamaApplication
             }
         }
 
-        //private void ListarMotorizados()
-        //{
-        //    DataTable dt = new DataTable();
-        //    SqlCommand cmd = new SqlCommand("Sp_ListarMotorizados", ConexionBD.con);
-        //    cmd.CommandType = CommandType.StoredProcedure;
-        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-        //    da.Fill(dt);
-        //
-        //}
+        private void ListarMotorizados()
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter();
+
+            try
+            {
+                ConexionBD.AbrirConexion();
+                da = new SqlDataAdapter("Sp_ListarMotorizados", ConexionBD.con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                da.SelectCommand.Parameters.AddWithValue("@numeroDocumento", txt_buscar.Text.Trim());
+
+                da.Fill(dt);
+                dgv_motorizados.DataSource = dt;
+
+                if (dgv_motorizados.Columns.Contains("Foto"))
+                {
+                    dgv_motorizados.Columns["Foto"].Visible = false;
+                }
+
+                ConexionBD.CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al listar motorizados: " + ex.Message, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
@@ -110,6 +129,7 @@ namespace NakamaApplication
                 MessageBox.Show(msje, "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 ConexionBD.CerrarConexion();
+                ListarMotorizados();
 
             }
             catch (Exception ex)
@@ -147,8 +167,13 @@ namespace NakamaApplication
         private void btn_menu_Click(object sender, EventArgs e)
         {
             Menu menu = new Menu();
-            menu.Show();
+            menu.ShowDialog();
             this.Hide();
+        }
+
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+            ListarMotorizados();
         }
     }
 }

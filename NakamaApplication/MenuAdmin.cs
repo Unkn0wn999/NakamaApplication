@@ -70,56 +70,57 @@ namespace NakamaApplication
         private void btn_cerrarSesion_Click(object sender, EventArgs e)
         {
             Login login = new Login();
-            login.Show();
             this.Hide();
+            login.ShowDialog();
         }
 
         private void btn_rmotorizados_Click(object sender, EventArgs e)
         {
             RegistroMotorizados rmotorizados = new RegistroMotorizados();
-            rmotorizados.Show();
             this.Hide();
+            rmotorizados.ShowDialog();
+
         }
 
         private void btn_rvehiculos_Click(object sender, EventArgs e)
         {
             RegistroVehiculos rvehiculos = new RegistroVehiculos();
-            rvehiculos.Show();
+            rvehiculos.ShowDialog();
             this.Hide();
         }
 
         private void btn_rpedidos_Click(object sender, EventArgs e)
         {
             RegistroPedidos rpedidos = new RegistroPedidos();
-            rpedidos.Show();
+            rpedidos.ShowDialog();
             this.Hide();
         }
 
         private void btn_cincidencias_Click(object sender, EventArgs e)
         {
             Controlncidencias cincidencias = new Controlncidencias();
-            cincidencias.Show();
+            cincidencias.ShowDialog();
             this.Hide();
         }
 
         private void btn_hpedidos_Click(object sender, EventArgs e)
         {
             HistorialPedidos hpedidos = new HistorialPedidos();
-            hpedidos.Show();
+            hpedidos.ShowDialog();
             this.Hide();
         }
 
         private void btn_gproductos_Click(object sender, EventArgs e)
         {
             GestionProductos gproductos = new GestionProductos();
-            gproductos.Show();
+            gproductos.ShowDialog();
             this.Hide();
         }
 
         private void btn_apedidos_Click(object sender, EventArgs e)
         {
             AsignacionPedidos apedidos = new AsignacionPedidos();
-            apedidos.Show();
+            apedidos.ShowDialog();
             this.Hide();
         }
 
